@@ -1,5 +1,7 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
+from database import engine
+import models
 
 from database import SessionLocal
 from models import LogEntry
@@ -10,6 +12,11 @@ from schemas import RawLogInput
 
 
 app = FastAPI()
+
+@app.on_event("startup")
+def startup_event():
+    # Create all tables if they don't exist
+    models.Base.metadata.create_all(bind=engine)
 
 # Dependency to get DB session
 def get_db():
