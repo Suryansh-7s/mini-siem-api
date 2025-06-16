@@ -135,6 +135,25 @@ uvicorn main:app --reload
 
 ---
 
+## 📸 Screenshots
+
+### 1. API Documentation (Swagger UI)
+![Swagger UI](screenshots/swagger-ui.png)
+
+### 2. Ingesting a Structured Log (/ingest)
+![Ingest Log](screenshots/ingest-example.png)
+
+### 3. Alert Detection (/alerts)
+![Alerts](screenshots/alerts-detected.png)
+
+### 4. Parsing a Raw Log (/ingest-raw)
+![Parsed Raw Log](screenshots/ingest-raw-response.png)
+
+### 5. Render Deployment Logs
+![Render Logs](screenshots/render-service.png)
+
+---
+
 ## 🙌 Author
 
 Made with passion for security and backend systems by Suryansh Sharma  
